@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/estilo2.css">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <div class="contenedor">
+        <div class="numero1">L</div> <br>
+        <div class="numero2">O</div> <br>
+        <div class="numero3">A</div> <br>
+        <div class="numero4">D</div> <br>
+        <div class="numero5">I</div> <br>
+        <div class="numero6">N</div> <br>
+        <div class="numero7">G</div> <br>
+        <div class="loader">
+            <span id="primero"></span>
+            <span id="segundo"></span>
+            <span id="tercero"></span>
+        </div>
+
+    </div>
+
+        <div id="centrar">
+            <a href="index2.html" target="_blank">
+        <button class="boton">
+            See Portfolio
+        </button> 
+            </a>
+        </div>
+
+    <div class="progreso">
+    <div class="barra-carga"></div>
+    </div>
+
+
+    
+    
+    <script>
+
+        //Obtenemos la barra
+
+        const barra = document.querySelector('.progreso');
+
+        //Function para crear la animación
+
+        function animacionBarra(){ //Esta función hara animar la barra de progreso
+
+            let width = 0; //Esta variable representa el ancho de la barra al comienzo
+
+            const interval = setInterval(frame, 40); //Controlamos el tiempo de la barra
+
+            function frame(){
+
+                if(width >= 100){ //Ancho de la barra
+
+                    clearInterval(interval);
+
+                }   else{
+
+                    width++;
+                    barra.style.width = width + '%';
+
+                }
+
+            }
+
+        }
+
+        //Llamamos a la función para comenzar la animación
+        animacionBarra()
+
+    </script>
+</body>
+</html>

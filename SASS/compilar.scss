@@ -1,0 +1,236 @@
+//Declaro variables
+
+$color1:#7d677e;
+$color2:#4f2c4d;
+$color3:#360b41;
+$color4:#ccc9aa;
+$color5:#fafdea;
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100..900&display=swap');
+
+html{
+
+    scroll-behavior: smooth;
+
+}
+
+body{
+
+    font-family: 'Josefin Sans', sans-serif;
+
+}
+
+header {
+    background-color: #360b41;
+    width: 100%;
+    height: 45vh;
+}
+  
+h1{
+    color: white;
+    text-align: center;
+    line-height: 200px;
+    font-weight: 700;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: type 5s 1 steps(81);
+}
+
+/*Animacion para el h1*/
+
+@keyframes type{
+
+    0%{
+
+        width: 0;
+
+    }
+
+    100%{
+
+        width: 100%;
+
+    }
+
+}
+
+#alinear{
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+button{
+
+    border: 5px black solid;
+    border-radius: 15px;
+    background-color: lightgray;
+    font-weight: 700;
+    opacity: 0.5;
+    transition: transform 0.2s 0s linear, opacity 0.2s 0s linear;
+    width: 150px;
+
+}
+
+button:hover{
+
+    transform: scale(1.2);
+    opacity: 1;
+
+}
+
+/*Final del header*/
+
+main{
+
+    background-color: $color1;
+    margin-top: 50px;
+    height: 1700px;
+
+}
+
+h2{
+
+    text-align: center;
+    font-style: italic;
+    font-weight: 800;
+    margin-bottom: 25px;
+    color: black;
+
+}
+
+.texto1{
+
+    font-size: 1.5em;
+    text-align: justify;
+    margin: 10px 20px;
+    color: black;
+
+}
+
+i{
+
+    a{
+
+        color: black;
+        text-decoration: none;
+    
+    }
+
+}
+
+i:hover{
+
+    text-decoration: underline;
+    cursor: pointer;
+
+}
+
+#carouselExampleIndicators{
+
+    margin: auto;
+    width: 60%;
+    height: auto;
+
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon{
+
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    border-radius: 100%;
+
+}
+
+form{
+
+    text-align: center;
+    border: 5px solid black;
+    --bg:green;
+    --text: "Enviar mensaje"
+
+}
+
+form:has(:placeholder-shown){
+
+    --text:"";
+    --bg:lightgrey;
+
+}
+
+.enviar::after{
+
+    content: var(--text);
+    background-color: var(--bg);
+    padding: 3px;
+    border-radius: 5px;
+
+}
+
+input{
+
+    width: 250px;
+    margin-bottom: 20px;
+
+}
+
+textarea{
+
+    width: 550px;
+    height: 250px;
+    resize: none;
+
+}
+
+.enviar{
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+    opacity: 1;
+
+}
+
+input::placeholder{
+
+    text-align: center;
+
+}
+
+textarea::placeholder{
+
+    text-align: center;
+    padding-top: 110px;
+
+}
+
+//Final del main
+
+footer{
+
+    background-color: black;
+    color: white;
+
+}
+
+h4{
+
+    text-align: center;
+
+}
+
+.alinear-iconos{
+
+    display: flex;
+    justify-content: center;
+
+}
+
+span{
+
+    font-size: 35px;
+    margin: 0 10px 0 10px;
+
+}
